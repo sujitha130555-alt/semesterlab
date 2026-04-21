@@ -16,4 +16,4 @@ steps:
 
   - name: Run build
     run: echo "Changes detected in src folder. Running workflow..."
-``` no hutton show fo ceck the freen sucess what i shoul doo how to show output i already commit add push 
+ ```
