@@ -1,0 +1,26 @@
+name: Run Tests
+
+on:
+push:
+branches:
+- main
+
+jobs:
+test:
+runs-on: ubuntu-latest
+
+```
+steps:
+  - name: Checkout repository
+    uses: actions/checkout@v3
+
+  - name: Install dependencies
+    run: |
+      echo "Installing dependencies..."
+      npm install
+
+  - name: Run test script
+    run: |
+      echo "Running tests..."
+      npm test
+```
