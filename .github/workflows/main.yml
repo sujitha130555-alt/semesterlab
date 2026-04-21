@@ -1,19 +1,16 @@
 name: Folder Specific Workflow
 
 on:
-push:
-paths:
-- 'src/**'
+  push:
+    paths:
+      - 'src/**'
 
 jobs:
-build:
-runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-```
-steps:
-  - name: Checkout code
-    uses: actions/checkout@v3
-
-  - name: Run build
-    run: echo "Changes detected in src folder. Running workflow..."
- ```
+      - name: Run build
+        run: echo "Changes detected in src folder. Running workflow..."
